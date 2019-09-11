@@ -1,0 +1,110 @@
+<h1>Demo Form</h1>
+
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <label for="min">min</label>
+  <input
+    id="min"
+    style="display: block; margin-bottom: 1rem;"
+    type="number"
+    formControlName="min"
+  />
+
+  <label for="max">max</label>
+  <input
+    id="max"
+    style="display: block; margin-bottom: 1rem;"
+    type="number"
+    formControlName="max"
+  />
+
+  <label for="required">required</label>
+  <input
+    id="required"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="required"
+  />
+
+  <label for="requiredTrue">requiredTrue</label>
+  <input
+    id="requiredTrue"
+    style="display: block; margin-bottom: 1rem;"
+    type="checkbox"
+    formControlName="requiredTrue"
+  />
+
+  <label for="email">email</label>
+  <input
+    id="email"
+    style="display: block; margin-bottom: 1rem;"
+    type="email"
+    formControlName="email"
+  />
+
+  <label for="minLength">minLength</label>
+  <input
+    id="minLength"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="minLength"
+  />
+
+  <label for="maxLength">maxLength</label>
+  <input
+    id="maxLength"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="maxLength"
+  />
+
+  <label for="pattern">pattern</label>
+  <input
+    id="pattern"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="pattern"
+  />
+
+  <label for="null">null</label>
+  <input
+    id="null"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="null"
+  />
+
+  <label for="custom">custom</label>
+  <input
+    id="custom"
+    style="display: block; margin-bottom: 1rem;"
+    type="text"
+    formControlName="custom"
+  />
+
+  <hr />
+
+  <div>
+    <h3>Value</h3>
+    {{ form.value | json }}
+  </div>
+
+  <div>
+    <h3>Errors</h3>
+    {{ form.get('min').errors | json }}
+    {{ form.get('max').errors | json }}
+    {{ form.get('required').errors | json }}
+    {{ form.get('requiredTrue').errors | json }}
+    {{ form.get('email').errors | json }}
+    {{ form.get('minLength').errors | json }}
+    {{ form.get('maxLength').errors | json }}
+    {{ form.get('pattern').errors | json }}
+    {{ form.get('null').errors | json }}
+    {{ form.get('custom').errors | json }}
+  </div>
+
+  <br />
+
+  <hr />
+
+  <button type="submit">Send</button>
+</form>
