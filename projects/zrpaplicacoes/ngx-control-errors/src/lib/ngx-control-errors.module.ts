@@ -17,7 +17,6 @@ import {
     NgxControlErrorsDirective,
     NgxControlErrorsComponent,
   ],
-  entryComponents: [NgxControlErrorsComponent],
   imports: [CommonModule],
   exports: [
     NgxFormSubmitDirective,
