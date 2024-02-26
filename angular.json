@@ -143,6 +143,6 @@
           }
         }
       }
-    }},
-  "defaultProject": "@zrpaplicacoes/ngx-control-errors"
+    }
+  }
 }
