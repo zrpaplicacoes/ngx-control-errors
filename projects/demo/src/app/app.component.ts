@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import {
-  FormBuilder,
-  FormGroup,
+  UntypedFormBuilder,
+  UntypedFormGroup,
   Validators,
   AbstractControl,
 } from '@angular/forms';
@@ -12,9 +12,9 @@ import {
   styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  form: FormGroup;
+  form: UntypedFormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: UntypedFormBuilder) {
     this.form = this.fb.group({
       min: [null, [Validators.min(5)]],
       max: [null, [Validators.max(5)]],
